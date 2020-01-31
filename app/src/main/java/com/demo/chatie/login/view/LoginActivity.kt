@@ -118,7 +118,6 @@ class LoginActivity : AppCompatActivity() {
         btn_save.setOnClickListener {
             if (et_name.text.toString().isNotEmpty()) {
                 val userDetail = User()
-                com.demo.toast.Toast(this).showToast()
 
                 userDetail.name = et_name.text.toString()
                 db.collection("user").document(uid)
