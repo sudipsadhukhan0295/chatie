@@ -84,10 +84,6 @@ class LoginActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-        if (check != null) {
-            Log.d("asd", "asd")
-        }
-
         if (auth.currentUser != null) startActivity(Intent(this, HomeActivity::class.java))
 
         setContentView(R.layout.activity_login)
