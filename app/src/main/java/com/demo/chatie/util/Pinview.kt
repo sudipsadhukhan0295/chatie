@@ -1,4 +1,4 @@
-package com.demo.chatie
+package com.demo.chatie.util
 
 /*
 MIT License
@@ -50,6 +50,7 @@ import java.util.ArrayList
 import android.text.InputType.TYPE_CLASS_NUMBER
 import android.text.InputType.TYPE_CLASS_TEXT
 import android.text.InputType.TYPE_NUMBER_VARIATION_PASSWORD
+import com.demo.chatie.R
 
 
 /**
@@ -92,7 +93,9 @@ class Pinview @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
     private var fromSetValue = false
     private var mForceKeyboard = true
     @ColorInt
-    private var pinValueColor = ContextCompat.getColor(getContext(), R.color.colorPrimary)
+    private var pinValueColor = ContextCompat.getColor(getContext(),
+        R.color.colorPrimary
+    )
 
     private var mIsEnabled = true
 
@@ -107,8 +110,8 @@ class Pinview @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
         get() {
             val it: Int
             when (inputType) {
-                Pinview.InputType.NUMBER -> it = TYPE_CLASS_NUMBER or TYPE_NUMBER_VARIATION_PASSWORD
-                Pinview.InputType.TEXT -> it = TYPE_CLASS_TEXT
+                InputType.NUMBER -> it = TYPE_CLASS_NUMBER or TYPE_NUMBER_VARIATION_PASSWORD
+                InputType.TEXT -> it = TYPE_CLASS_TEXT
                 else -> it = TYPE_CLASS_TEXT
             }
             return it
@@ -309,7 +312,8 @@ class Pinview @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
      */
     private fun initAttributes(context: Context, attrs: AttributeSet?, defStyleAttr: Int) {
         if (attrs != null) {
-            val array = context.obtainStyledAttributes(attrs, R.styleable.Pinview, defStyleAttr, 0)
+            val array = context.obtainStyledAttributes(attrs,
+                R.styleable.Pinview, defStyleAttr, 0)
             pinBackground = array.getResourceId(R.styleable.Pinview_pinBackground, pinBackground)
             mPinLength = array.getInt(R.styleable.Pinview_pinLength, mPinLength)
             mPinHeight = array.getDimension(R.styleable.Pinview_pinHeight, mPinHeight.toFloat()).toInt()

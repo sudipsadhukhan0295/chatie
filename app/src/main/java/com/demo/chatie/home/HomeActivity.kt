@@ -1,8 +1,9 @@
-package com.demo.chatie
+package com.demo.chatie.home
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.demo.chatie.R
 import com.demo.chatie.login.view.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*

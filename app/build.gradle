@@ -36,23 +36,27 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "androidx.lifecycle:lifecycle-extensions:$version.archLifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$version.archLifecycleVersion"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "androidx.lifecycle:lifecycle-compiler:$version.archLifecycleVersion"
+
     androidTestImplementation "androidx.arch.core:core-testing:$version.androidxArchVersion"
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.0.0'
+
     implementation "com.google.firebase:firebase-analytics:$version.analyticsVersion"
     implementation "com.google.firebase:firebase-firestore-ktx:$version.firestoreVersion"
+    implementation "com.google.firebase:firebase-messaging:$version.firebaseCloudMessaging"
+    implementation "com.google.firebase:firebase-auth:$version.firebaseAuth"
+
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
 
     implementation 'com.google.android.gms:play-services-identity:17.0.0'
     implementation 'com.google.android.gms:play-services-auth-api-phone:17.3.0'
-    implementation "com.google.firebase:firebase-auth:$version.firebaseAuth"
-
 
     implementation "com.squareup.retrofit2:retrofit:$version.retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$version.converterGsonVersion"

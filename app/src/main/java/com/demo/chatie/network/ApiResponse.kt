@@ -1,4 +1,4 @@
-package com.demo.chatie
+package com.demo.chatie.network
 
 
 class ApiResponse<T> {
